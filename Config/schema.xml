@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database defaultIdMethod="native" name="thelia"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../../../core/vendor/propel/propel/resources/xsd/database.xsd" >
+
+    <table name="t1_t2_product" namespace="CatchThelia1Url\Model">
+        <column name="idt1" type="INTEGER" />
+        <column name="idt2" type="INTEGER" />
+    </table>
+
+    <table name="t1_t2_category" namespace="CatchThelia1Url\Model">
+        <column name="idt1" type="INTEGER" />
+        <column name="idt2" type="INTEGER" />
+    </table>
+
+    <table name="t1_t2_content" namespace="CatchThelia1Url\Model">
+        <column name="idt1" type="INTEGER" />
+        <column name="idt2" type="INTEGER" />
+    </table>
+
+    <table name="t1_t2_folder" namespace="CatchThelia1Url\Model">
+        <column name="idt1" type="INTEGER" />
+        <column name="idt2" type="INTEGER" />
+    </table>
+
+    <external-schema filename="local/config/schema.xml" referenceOnly="true" />
+</database>

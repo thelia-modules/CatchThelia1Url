@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<config xmlns="http://thelia.net/schema/dic/config"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://thelia.net/schema/dic/config http://thelia.net/schema/dic/config/thelia-1.0.xsd">
+
+    <services>
+        <service id="catch_thelia1_url.util.url_generator" class="CatchThelia1Url\Util\UrlGenerator" scope="request">
+            <argument type="service" id="request"/>
+            <argument type="service" id="event_dispatcher" />
+        </service>
+
+        <service id="catch_thelia1_url.kernel_exception" class="CatchThelia1Url\EventListener\KernelExceptionListener" scope="request">
+            <argument type="service" id="request"/>
+            <argument type="service" id="service_container" />
+            <argument type="service" id="catch_thelia1_url.util.url_generator" />
+            <tag name="kernel.event_subscriber" />
+        </service>
+
+        <service id="catch_thelia1_url.kernel_request" class="CatchThelia1Url\EventListener\KernelRequestListener" scope="request">
+            <argument type="service" id="request"/>
+            <argument type="service" id="service_container" />
+            <argument type="service" id="catch_thelia1_url.util.url_generator" />
+            <tag name="kernel.event_subscriber" />
+        </service>
+    </services>
+
+</config>
